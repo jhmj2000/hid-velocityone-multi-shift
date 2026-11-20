@@ -114,7 +114,7 @@ def main():
                 if handbrakebut and buttonstat==4:
                     handbrakebut=False
                     handbrakebut2=False
-                    ui.write(ecodes.EV_KEY, ecodes.BTN_BASE5, 0)
+                    ui.write(ecodes.EV_KEY, ecodes.BTN_BASE6, 0)
                     ui.syn()
                     logger.debug("Handbrake RELEASED")
 
@@ -125,13 +125,13 @@ def main():
                 if buttonstat==6 and not combibut2:
                     handbrakebut2=True
 
-                if time.time()-time2>0.5 and highlowbut2 and not highlowbut and not combibut2:
+                if highlowbut2 and not highlowbut and not combibut2:
                     highlowbut=True
                     ui.write(ecodes.EV_KEY, ecodes.BTN_BASE5, 1)
                     ui.syn()
                     logger.debug("HIGH/LOW PRESSED")
 
-                if time.time()-time1>0.5 and handbrakebut2 and not handbrakebut and not combibut2:
+                if handbrakebut2 and not handbrakebut and not combibut2:
                     handbrakebut=True
                     ui.write(ecodes.EV_KEY, ecodes.BTN_BASE6, 1)
                     ui.syn()
