@@ -8,7 +8,7 @@ This project provides a Linux userspace driver for the Turtle Beach VelocityOne 
 
 ### Changes on the fork
 - When H-pattern is enabled, handbrake button is now a separate programmable button. Before it was only used for the analog mode switching.
-- When you press both the handbrak and the high/low button it is registered as a 3rd button.
+- When you press both the handbrake and the high/low button it is registered as a 3rd button.
 
 ### Features
 - **Full Input Mapping**: Supports all 7 gears + Reverse, High/Low range button, Sequential shift (Up/Down), and Handbrake (Analog axis).
@@ -26,18 +26,14 @@ This project provides a Linux userspace driver for the Turtle Beach VelocityOne 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/mtorromeo/hid-velocityone-multi-shift.git
+   git clone https://github.com/Saju159/hid-velocityone-multi-shift.git
    cd hid-velocityone-multi-shift
    ```
 
 2. Install project in a python virtual environment:
    ```bash
-   pip install .
+   pipx install .
    ```
-
-## Packages
-
-An Arch Linux package is available on [AUR](https://aur.archlinux.org/packages/hid-velocityone-multi-shift).
 
 ## Usage
 
